@@ -1,5 +1,6 @@
 import ViewPrincipal from './view/ViewPrincipal.jsx';
 import ViewNosotros from './view/ViewNosotros.jsx';
+import ViewContactos from './view/ViewContactos.jsx';
 import ViewAdmin from'./view/admin/ViewAdmin.jsx';
 import ViewAdmin2 from'./view/admin/ViewAdmin2.jsx';
 import ViewAdmin3 from './view/admin/ViewAdmin3.jsx';
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ViewPrincipal/>}></Route>
         <Route path='/nosotros' element={<ViewNosotros/>}></Route>
+        <Route path='/contactos' element={<ViewContactos/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/registro' element={<Registro/>}></Route>
         <Route path='/admin' element={<ViewAdmin/>}></Route>

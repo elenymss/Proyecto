@@ -4,6 +4,7 @@
 body {
     width: 100% 
 }
+
 /* menu principal */
 *{
   text-decoration: none;
@@ -302,7 +303,9 @@ border-radius: 10px;
       flex-direction: column;
       align-items: center;
     }
-    
+    main{
+      
+    }
     .sl-cont2{
       margin-top: 20px;
       gap:10px;
@@ -782,4 +785,10 @@ background: #eee;
   background: #021f31;
   text-align: center;
   color: #ffff;
+}
+/* contactos */
+.bg-contact{
+	background-color: rgb(64, 70, 77);
+	box-shadow:   1px 1px 2px rgb(109, 106, 106), 0 0 1em rgb(218, 212, 212), 0 0 0.2em rgb(63, 64, 82);
+
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import menu from '../assets/img/menu.png'
+import { Link } from 'react-router-dom'
 function CompMenu (){
     return (
         <div>
@@ -10,16 +11,18 @@ function CompMenu (){
             <img className="ms-3" src={menu}/>
             </label>
 
-            <a href="#" className="enlace">
+            <Link to={"/"} className="enlace">
             <img src="#" alt="" className="logo" />
-            </a>
+            </Link>
                 <ul className="items">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
+                <li><Link to={"/"} >INICIO</Link></li>
                 {/* <li><a href="#">Portafolio</a></li>  */}
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#contactos">Contacto</a></li>
+                <li><Link to={"/"} >NOSOTROS</Link></li>
+                <li><Link to={"/contactos"} >CONTACTOS</Link></li>
+        
                 </ul>
+                
+
             </nav>
         </div>
         

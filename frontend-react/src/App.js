@@ -10,7 +10,7 @@ import CompCreateUser from './view/admin/compUser/CreateUser.jsx';
 import CompEditUser from './view/admin/compUser/EditUser.jsx';
 import CompCreateAdmin from './view/admin/compAdmin/CreateAdmin.jsx';
 import Login from './view/Login.jsx';
-import Registro from './view/Registro.jsx'
+import RegistroUser from './view/Registro.jsx';
 
 //import router
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -28,7 +28,7 @@ function App() {
         <Route path='/nosotros' element={<ViewNosotros/>}></Route>
         <Route path='/contactos' element={<ViewContactos/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/registro' element={<Registro/>}></Route>
+        <Route path='/registro' element={<RegistroUser/>}></Route>
         <Route path='/admin' element={<ViewAdmin/>}></Route>
         <Route path='/admin/aprendiz' element={<ViewAdmin2/>}></Route>
         <Route path='/admin/admin' element={<ViewAdmin3/>}></Route>

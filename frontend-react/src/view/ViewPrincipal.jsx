@@ -14,6 +14,7 @@ import appmovil from "../assets/img/app.png"
 import emprendimiento from "../assets/img/emprendimiento.png";
 import muro from "../assets/img/muro.png";
 import psi from "../assets/img/psi.png"
+import { Link } from "react-router-dom";
 
 
 function ViewPrincipal() {
@@ -35,9 +36,9 @@ function ViewPrincipal() {
             posibles causantes de anomalías en la seguridad.
             </p>
             <div className="options">
-              <button className="btn1" type="submit">
+              <Link to="/registro" className="btn1 text-center text-white fw-bold" >
                 Registrate
-              </button>
+              </Link>
               {/* <button className="btn2" type="submit" >Ingresar</button> */}
               <a href="./user/index.jsx" className="btn-neon">
                 <span id="span1"></span>

@@ -1,26 +1,26 @@
 function ValidationLogin(values) {
   let error = {};
 
-  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
+  const correo_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const passw_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
 
-  if (values.email === "") {
-    error.email = "¡Complete el campo porfavor!";
-  } else if (!email_pattern.test(values.email)) {
-    error.email = "Su E-mail no coincide";
+  if (values.correo === "") {
+    error.correo = "¡Complete el campo porfavor!";
+  } else if (!correo_pattern.test(values.correo)) {
+    error.correo = "Su direccion de correo no coincide";
   } else {
-    error.email = "";
+    error.correo = "";
   }
 
   // Validaciónes para La contraseña
-  if (values.password === "") {
-    error.password =
+  if (values.passw === "") {
+    error.passw =
       "El capo de contraseña no debe estar vacio, porfavor digite una contraseña";
-  } else if (!password_pattern.test(values.password)) {
-    error.password =
+  } else if (!passw_pattern.test(values.passw)) {
+    error.passw =
       "La contraseña debe contener almenos 8 caracteres entre ellos: Numeros, letras minusculas y mayusculas.";
   } else {
-    error.password = "";
+    error.passw = "";
   }
 
   return error;

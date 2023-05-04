@@ -42,8 +42,7 @@ function RegistroUser() {
       // PETICION DEL FRONT AL BACK, CON AXIOS Y SERVIDOR NODEJS
       axios.post('http://localhost:8000/registro', values)
         .then(res => {
-          navigate('/')
-          
+          navigate('/login');
         })
         .catch(err => console.log(err))
     }
@@ -57,13 +56,13 @@ function RegistroUser() {
                 className="img-fluid"/>
             </div>
             <div class="col-md-4 col-lg-2 col-xl-7 offset-xl-1 bg-cont ">
-              <form className="p-2" onClick={handleSubmit}>
+              <form className="p-2" onSubmit={handleSubmit}>
                 <h2 className="text-center bg-text ">Registro</h2>
                 <div className="d-flex">
                 <div className="col-md-2 col-lg-2 col-xl-6 m-1">
                     <div className="form-outline mb-1 mt-2">
                       <label className="form-label link">Nombres</label>
-                      <input type="text" name="nombres" id="nombres" className="form-control form-control-lg" onChange={handleInput} />
+                      <input type="text" name="nombres" id="nombre" className="form-control form-control-lg" onChange={handleInput} />
                       {/* MUESTRO LOS ERRORES CON LAS VALIDACIONES en el campo de nombres */}
                       {errors.nombres && <span className="text-danger"> {errors.nombres}</span>}
                     </div>
@@ -78,7 +77,7 @@ function RegistroUser() {
                       <select name="genero" id="tipoGen" className="form-control form-control-lg" onChange={handleInput}>
                         <option name="select" id="1" className="text-center" >Seleccióne...</option>
                         <option name="masculino" id="2" >Masculino</option>
-                        <option name="masculino" id="3">Femenino</option>
+                        <option name="femenino" id="3">Femenino</option>
                       </select> 
                       {/* MUESTRO LOS ERRORES CON LAS VALIDACIONES en el campo de nombres */}
                             {errors.genero && <span className="text-danger"> {errors.genero}</span>}
@@ -86,9 +85,9 @@ function RegistroUser() {
                     <div className="form-outline mb-2">
                       <label className="form-label link" for="pass">Tipo documento</label>
                       <select name="tipoDocumento" id="tipoDoc" className="form-control form-control-lg" onChange={handleInput}>
-                        <option name="options" value="1" className="text-center" >Seleccióne...</option>
-                        <option name="TI" value="T.I" className="text-center" >T.I</option>
-                        <option name="CC" value="C.C" className="text-center">C.C</option>
+                        <option name="options" id="1" className="text-center" >Seleccióne...</option>
+                        <option name="TI" id="2" className="text-center" >Tarjeta de identidad</option>
+                        <option name="CC" id="3" className="text-center">Cedula de ciudadania</option>
                       </select> 
                       {/* MUESTRO LOS ERRORES CON LAS VALIDACIONES en el campo de nombres */}
                             {errors.tipoDocumento && <span className="text-danger"> {errors.tipoDocumento}</span>}
@@ -145,7 +144,7 @@ function RegistroUser() {
                 </div>
                 
                 <div className="d-flex justify-content-center mt-3">
-                  <button type="submit" value="Registrarse" className=" btn-login p-2">Registrarse</button>
+                  <button type="submit" value="regist" className=" btn-login p-2" >Registrarse</button>
                 </div>
                 <div className="d-flex justify-content-center mt-3">
                     <Link to="/login" className="link">Ya tengo cuenta</Link>
